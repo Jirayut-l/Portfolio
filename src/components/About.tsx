@@ -1,11 +1,29 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
-import { IconTerminal, IconCalendar, IconBriefcase, IconSchool, IconCode } from "@/components/Icons";
+import { 
+  IconTerminal, 
+  IconCalendar, 
+  IconBriefcase, 
+  IconSchool, 
+  IconCode 
+} from "./Icons";
 
-const EXPERIENCE = [
+interface Job {
+  company: string;
+  role: string;
+  period: string;
+  description: string[];
+}
+
+interface EducationItem {
+  degree: string;
+  school: string;
+  year: string;
+}
+
+const EXPERIENCE: Job[] = [
   {
     company: "FWD insurance public company limited",
     role: "BackEnd Developer",
@@ -48,7 +66,7 @@ const EXPERIENCE = [
   }
 ];
 
-const EDUCATION = [
+const EDUCATION: EducationItem[] = [
   {
     degree: "Master of Science in Information Technology",
     school: "King Mongkut's University of Technology North Bangkok",
@@ -61,11 +79,10 @@ const EDUCATION = [
   }
 ];
 
-const AboutPage = () => {
+const About = () => {
   return (
-    <>
-      <Navbar />
-      <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <section id="about" className="py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -175,9 +192,9 @@ const AboutPage = () => {
             </p>
           </div>
         </motion.section>
-      </main>
-    </>
+      </div>
+    </section>
   );
 };
 
-export default AboutPage;
+export default About;

@@ -13,7 +13,7 @@ const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
 });
 
 const NAV_LINKS = [
-  { name: "About", href: "/about" },
+  { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },

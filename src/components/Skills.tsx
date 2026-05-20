@@ -9,7 +9,14 @@ import {
   IconCloud 
 } from "./Icons";
 
-const skillCategories = [
+interface SkillCategory {
+  title: string;
+  icon: React.ReactNode;
+  skills: string[];
+  color: string;
+}
+
+const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     icon: <IconCode className="w-6 h-6" />,

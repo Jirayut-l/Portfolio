@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import { IconDatabase, IconServer, IconShield, IconCode } from "./Icons";
 
+const FLOATING_ICONS = [
+  { icon: <IconDatabase className="w-8 h-8 text-primary" />, position: "top-1/4 left-0", animation: { y: [0, -10, 0] }, duration: 4 },
+  { icon: <IconServer className="w-8 h-8 text-accent" />, position: "bottom-1/4 right-0", animation: { y: [0, 10, 0] }, duration: 5 },
+  { icon: <IconShield className="w-6 h-6 text-emerald-500" />, position: "top-1/3 right-10", animation: { scale: [1, 1.1, 1] }, duration: 6 },
+  { icon: <IconCode className="w-6 h-6 text-orange-500" />, position: "bottom-1/3 left-10", animation: { rotate: [0, 5, 0] }, duration: 7 },
+];
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -68,34 +75,16 @@ const Hero = () => {
 
         {/* Floating Icons for Backend Vibe */}
         <div className="hidden lg:block">
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 left-0 p-4 rounded-2xl bg-background border border-border shadow-xl"
-          >
-            <IconDatabase className="w-8 h-8 text-primary" />
-          </motion.div>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-1/4 right-0 p-4 rounded-2xl bg-background border border-border shadow-xl"
-          >
-            <IconServer className="w-8 h-8 text-accent" />
-          </motion.div>
-          <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/3 right-10 p-3 rounded-xl bg-background border border-border shadow-lg"
-          >
-            <IconShield className="w-6 h-6 text-emerald-500" />
-          </motion.div>
-          <motion.div
-            animate={{ rotate: [0, 5, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-1/3 left-10 p-3 rounded-xl bg-background border border-border shadow-lg"
-          >
-            <IconCode className="w-6 h-6 text-orange-500" />
-          </motion.div>
+          {FLOATING_ICONS.map((icon, index) => (
+            <motion.div
+              key={index}
+              animate={icon.animation}
+              transition={{ duration: icon.duration, repeat: Infinity, ease: "easeInOut" }}
+              className={`absolute ${icon.position} p-4 rounded-2xl bg-background border border-border shadow-xl`}
+            >
+              {icon.icon}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

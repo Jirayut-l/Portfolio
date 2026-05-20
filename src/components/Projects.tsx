@@ -4,7 +4,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import { IconExternalLink, IconGithub, IconCode, IconDatabase, IconGlobe, IconServer } from "./Icons";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  stats: string;
+  icon: React.ReactNode;
+  link: string;
+  github: string;
+}
+
+const projects: Project[] = [
   {
     title: "FWD Data Microservices",
     description: "Orchestrated 3 high-availability microservices for complex business data calculations, ensuring precise alignment with BA and QA requirements.",

@@ -27,7 +27,7 @@ const Contact = () => {
               <a href="#" className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all text-foreground">
                 <IconLinkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:hello@example.com" className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all text-foreground">
+              <a href="mailto:jirayut.laorpongphruek@gmail.com" className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all text-foreground">
                 <IconMail className="w-6 h-6" />
               </a>
             </div>
@@ -67,7 +67,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-24 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-sm text-foreground/40 gap-4">
-          <p>© 2026 Backend Systems Architect. Built with Next.js & Tailwind CSS.</p>
+          <p>© 2026 Tum Jirayut. Built with Next.js & Tailwind CSS.</p>
           <div className="flex space-x-8">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

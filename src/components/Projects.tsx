@@ -2,33 +2,33 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { IconExternalLink, IconGithub, IconCode, IconDatabase, IconGlobe } from "./Icons";
+import { IconExternalLink, IconGithub, IconCode, IconDatabase, IconGlobe, IconServer } from "./Icons";
 
 const projects = [
   {
-    title: "ScaleCommerce API",
-    description: "Architected a high-concurrency e-commerce backend handling 50k+ RPM. Optimized PostgreSQL queries reducing latency by 45%.",
-    tech: ["Go", "gRPC", "PostgreSQL", "Redis"],
-    stats: "45% Latency Reduction",
+    title: "FWD Data Microservices",
+    description: "Orchestrated 3 high-availability microservices for complex business data calculations, ensuring precise alignment with BA and QA requirements.",
+    tech: ["C#", ".NET Core", "Microservices", "TDD"],
+    stats: "3 Microservices Maintained",
+    icon: <IconServer className="w-5 h-5" />,
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "ThaiBev E-Recruitment",
+    description: "Developed and maintained comprehensive full-stack e-recruitment and employee management systems utilizing Test-Driven Development.",
+    tech: ["Angular", ".NET Core", "TDD", "Agile"],
+    stats: "End-to-End Delivery",
     icon: <IconCode className="w-5 h-5" />,
     link: "#",
     github: "#",
   },
   {
-    title: "AuthGuard Microservice",
-    description: "Distributed authentication system with RBAC and JWT. Implemented centralized logging and circuit breaking for fault tolerance.",
-    tech: ["Node.js", "NestJS", "MongoDB", "RabbitMQ"],
-    stats: "99.99% Availability",
+    title: "PTT API Migration",
+    description: "Refactored legacy database stored procedures into modern C# .NET APIs, significantly enhancing logic execution speed and system maintainability.",
+    tech: ["C#", ".NET Framework", "SQL Server"],
+    stats: "Improved Execution Speed",
     icon: <IconDatabase className="w-5 h-5" />,
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "EventFlow Engine",
-    description: "Real-time event processing pipeline for telemetry data. Capable of ingestion rates exceeding 1M events per second.",
-    tech: ["Python", "Apache Kafka", "ClickHouse", "Docker"],
-    stats: "1M+ Events/Sec",
-    icon: <IconGlobe className="w-5 h-5" />,
     link: "#",
     github: "#",
   },

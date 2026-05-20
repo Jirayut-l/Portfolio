@@ -13,25 +13,25 @@ const skillCategories = [
   {
     title: "Languages",
     icon: <IconCode className="w-6 h-6" />,
-    skills: ["TypeScript", "Node.js", "Python", "Go", "SQL"],
+    skills: ["C#", "TypeScript", "Golang", "SQL", "HTML/CSS"],
     color: "text-blue-500",
   },
   {
-    title: "Backend",
+    title: "Frameworks",
     icon: <IconServer className="w-6 h-6" />,
-    skills: ["Express", "FastAPI", "NestJS", "GraphQL", "gRPC"],
+    skills: [".NET Core", "Entity Framework", "Angular", "xUnit", "Jest"],
     color: "text-indigo-500",
   },
   {
     title: "Databases",
     icon: <IconDatabase className="w-6 h-6" />,
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+    skills: ["MySQL", "SQL Server", "Redis", "PostgreSQL"],
     color: "text-emerald-500",
   },
   {
-    title: "Infrastructure",
+    title: "Tools & Concepts",
     icon: <IconCloud className="w-6 h-6" />,
-    skills: ["Docker", "Kubernetes", "AWS", "CI/CD", "Nginx"],
+    skills: ["Docker", "Git", "TDD", "Agile/Scrum", "RESTful APIs"],
     color: "text-orange-500",
   },
 ];

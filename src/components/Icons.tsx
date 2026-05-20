@@ -126,3 +126,9 @@ export const IconSchool = (props: IconProps) => (
     <path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" />
   </IconBase>
 );
+
+export const IconChevronDown = (props: IconProps) => (
+  <IconBase {...props}>
+    <polyline points="6 9 12 15 18 9" />
+  </IconBase>
+);

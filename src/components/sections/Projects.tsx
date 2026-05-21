@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { IconExternalLink, IconGithub, IconCode, IconDatabase, IconGlobe, IconServer } from "./Icons";
+import { IconExternalLink, IconGithub, IconCode, IconDatabase, IconServer } from "@/components/ui/Icons";
 
 interface Project {
   title: string;

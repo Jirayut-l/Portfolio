@@ -149,7 +149,7 @@ const Hero = () => {
     // Parse format: [13:45:20] GET /api/v1/projects - 200 OK - 12ms
     const match = line.match(/^\[(.*?)\]\s+(GET|POST|PUT|DELETE)\s+(.*?)\s+-\s+(.*?)\s+-\s+(.*?)$/);
     if (match) {
-      const [_, time, method, path, status, latency] = match;
+      const [, time, method, path, status, latency] = match;
       let methodColor = "text-emerald-400";
       if (method === "POST") methodColor = "text-sky-400";
       if (method === "PUT") methodColor = "text-amber-400";
@@ -230,7 +230,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="max-w-xl text-lg text-foreground/60 mb-8 leading-relaxed"
             >
-              Hi, I'm <strong className="text-foreground font-semibold">Tum Jirayut</strong>, a Mid-Level Backend Developer. 
+              Hi, I&apos;m <strong className="text-foreground font-semibold">Tum Jirayut</strong>, a Mid-Level Backend Developer. 
               I specialize in designing robust APIs, optimizing database performance, 
               and orchestrating microservices architectures using .NET Core.
             </motion.p>

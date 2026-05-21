@@ -1,6 +1,6 @@
 "use client";
 
-import { IconMail, IconGithub, IconLinkedin, IconTerminal } from "./Icons";
+import { IconMail, IconGithub, IconLinkedin, IconTerminal } from "@/components/ui/Icons";
 
 const socialLinks = [
   { href: "#", icon: <IconGithub className="w-6 h-6" />, label: "GitHub" },

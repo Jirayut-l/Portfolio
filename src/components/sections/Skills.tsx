@@ -7,7 +7,7 @@ import {
   IconDatabase, 
   IconServer, 
   IconCloud 
-} from "./Icons";
+} from "@/components/ui/Icons";
 
 interface SkillCategory {
   title: string;

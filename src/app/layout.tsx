@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Specialized in building reliable and scalable backend infrastructures with Next.js, TypeScript, and Node.js.",
 };
 
-import { ThemeProvider } from "@/components/ThemeContext";
+import { ThemeProvider } from "@/components/providers/ThemeContext";
 
 export default function RootLayout({
   children,

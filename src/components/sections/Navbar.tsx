@@ -3,11 +3,11 @@
 import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { IconTerminal, IconMenu, IconX } from "./Icons";
+import { IconTerminal, IconMenu, IconX } from "@/components/ui/Icons";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
 // Dynamically import ThemeToggle to avoid hydration mismatch without manual 'mounted' state
-const ThemeToggle = dynamic(() => import("./ThemeToggle"), { 
+const ThemeToggle = dynamic(() => import("@/components/ui/ThemeToggle"), { 
   ssr: false,
   loading: () => <div className="min-w-[40px] min-h-[40px]" />
 });

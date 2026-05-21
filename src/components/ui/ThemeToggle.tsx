@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { IconSun, IconMoon } from "./Icons";
 import { useTheme } from "@/components/providers/ThemeContext";
 

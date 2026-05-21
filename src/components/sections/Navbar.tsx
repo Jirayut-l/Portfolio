@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { IconTerminal, IconMenu, IconX } from "@/components/ui/Icons";

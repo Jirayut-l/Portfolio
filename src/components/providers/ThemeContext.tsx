@@ -24,21 +24,32 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   useEffect(() => {
+    let active = true;
     const savedTheme = localStorage.getItem("theme") as Theme;
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     const initialTheme = savedTheme || systemTheme;
     
-    setTheme(initialTheme);
     applyTheme(initialTheme);
+    
+    // Defer the state update to avoid synchronous cascading renders during mount/effect commit phase
+    const timeoutId = setTimeout(() => {
+      if (active) {
+        setTheme(initialTheme);
+      }
+    }, 0);
+
+    return () => {
+      active = false;
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === "light" ? "dark" : "light";
-      localStorage.setItem("theme", newTheme);
-      applyTheme(newTheme);
-      return newTheme;
-    });
+    const currentTheme = theme || "dark";
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    applyTheme(newTheme);
   };
 
   return (

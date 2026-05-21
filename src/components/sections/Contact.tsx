@@ -27,12 +27,12 @@ const Contact = () => {
             
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-foreground leading-tight">
               Let&apos;s build something <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">reliable together.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">high-performance together.</span>
             </h2>
             
             <p className="text-lg text-foreground/60 mb-8 max-w-md">
-              Available for freelance engagements, system optimizations, and full-time architecture roles. 
-              Let&apos;s talk API design, database schemas, and caching layers.
+              Available to tackle complex backend challenges, optimize system bottlenecks, and build scalable architectures. 
+              Let&apos;s discuss your requirements and engineer robust solutions.
             </p>
             
             <div className="flex space-x-5">
